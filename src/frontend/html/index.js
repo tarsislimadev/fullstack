@@ -1,12 +1,17 @@
 import { HTML, nInput, nButton } from '@brtmvdl/frontend'
 
+import * as API from './api.js'
+
 const app = HTML.fromId('app')
 
-const input = new nInput()
-input.setPlaceholder('input')
-app.append(input)
+const email_input = new nInput()
+app.append(email_input)
 
-const button = new nButton()
-button.setText('button')
-button.on('click', () => window.alert(`value: ${input.getValue()}`))
-app.append(button)
+const save_button = new nButton()
+save_button.setText('save')
+save_button.on('click', () => {
+  const email = email_input.getValue()
+  API.saveForm({ email })
+    .then((res) => console.log({ res }))
+    .catch((err) => console.error(err))
+})
