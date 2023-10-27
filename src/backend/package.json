@@ -1,13 +1,20 @@
 {
   "name": "backend",
   "version": "0.1.0",
-  "main": "index.js",
+  "private": true,
+  "main": "./src/index.js",
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "start": "node ."
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230419.0",
+    "typescript": "^5.0.4",
+    "wrangler": "^3.0.0"
   },
   "dependencies": {
-    "@brtmvdl/backend": "^1.0.2"
+    "@brtmvdl/backend": "^1.0.3"
   }
 }
