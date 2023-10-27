@@ -15,6 +15,6 @@
     "wrangler": "^3.0.0"
   },
   "dependencies": {
-    "@brtmvdl/backend": "^1.0.3"
+    "@brtmvdl/backend": "^1.0.4"
   }
 }
