@@ -7,3 +7,9 @@ services:
       - './src/frontend/html:/usr/share/nginx/html'
     ports:
       - '8080:80'
+  backend:
+    build: './src/backend'
+    volumes:
+      - './src/backend:/app'
+    ports:
+      - '8000:80'
