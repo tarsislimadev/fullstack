@@ -12,6 +12,6 @@
 
 - [ ] Database: a PostgreSQL instance on ElephantSQL
 
-## License
+## license
 
 [MIT](./LICENSE)
